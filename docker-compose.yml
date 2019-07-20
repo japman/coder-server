@@ -1,0 +1,9 @@
+version: "3" 
+services:
+  code-server:
+          image: codercom/code-server:1.1156-vsc1.33.1
+    volumes:
+      - "~/code-server/:/home/coder/project" 
+    ports:
+      - 8443:8443
+    command: "--allow-http --password=$PASSWORD -e /home/coder/project/.extension/"
